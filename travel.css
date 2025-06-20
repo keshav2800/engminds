@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+}
+
+body {
+
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3
+}
+.top-bar {
+  background: linear-gradient(to top, #ff8a00, #e52e71 );
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  border-bottom: 2px solid #ffffff40;
+}
+
+header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #2575fc;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: black;
+}
+
+.filters {
+    padding: 20px;
+    background-color: #f7f9fc;
+    overflow: auto;
+}
+
+.destination-list {
+    padding: 20px;
+}
+
+.card {
+    box-shadow: 2px 2px 8px gray;
+    background-color: #eef1ff ;
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+
+}
+
+.card:hover {
+    transform: scale(1.05)
+}
+
+.card img {
+    width: 100%;
+    filter: grayscale(20%);
+    clip-path: circle();
+}
+
+.card::after {
+    content: "Top seller";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #2575fc;
+    color: #e2d8d8;
+    padding: 2px 6px;
+    font: 0.7em;
+    z-index: 2;
+}
+
+.booking-form form {
+    background-color: #f1f4f9;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #2575fc;
+    border-radius: 10px;
+}
+
+.booking-form input,
+.booking-form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+.booking-form button:hover {
+    background-color: #2575fc;
+}
+
+input[type="email"]{
+    border: 1px solid gray;
+}
+
+nav ul li:first-child a{
+    font-weight: bold;
+}
