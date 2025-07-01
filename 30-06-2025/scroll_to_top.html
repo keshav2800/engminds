@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #button{
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scroll to Top</h1>
+    <button id="button"> Scroll to Top</button>
+    <script>
+        $(document).ready(function(){
+            $("#button").click(function(){
+                $("html, body").animate({scrollTop: 0}, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

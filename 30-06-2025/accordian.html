@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1> click 1</h1>
+    <p> this is the content of the accordian 1</p>
+    <h1> click 2</h1>
+    <p> this is the content of the accordian 2</p>
+    <script>
+        $(document).ready(function(){
+            $("h1").click(function(){
+                $(this).next("p").slideToggle();
+
+            })
+        })
+    </script>
+    
+</body>
+</html>

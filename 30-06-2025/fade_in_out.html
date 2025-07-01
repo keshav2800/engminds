@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In and Out</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="box1" style="width: 100px; height: 100px; background-color: red; display: none;"></div>
+    <div id="box2" style="width: 100px; height: 100px; background-color: blue; display: none;"></div>
+    <button id="button1"> Fade In</button>
+    <button id="button2"> Fade Out</button>
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("#box1").fadeIn();
+                $("#box2").fadeIn();
+            });
+            $("#button2").click(function(){
+                $("#box1").fadeOut();
+                $("#box2").fadeOut();
+            });
+        });
+    </script>
+    
+</body>
+</html>

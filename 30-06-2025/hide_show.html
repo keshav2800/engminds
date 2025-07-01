@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="para"> Hide and Show</p>
+    <button> click me</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#para").toggle();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,9 +1,12 @@
+
 class Bankaccount{
+    #pin
     constructor(name, amount , pin){
+        // #pin
         this.name = name;
         this.amount = amount;
         // Make PIN private using closure
-        let _pin = pin;
+        this.#pin = pin;
         this.accountNumber = Math.floor(Math.random()*600000 + 100000);
         this.balance = 0; // Initialize balance to 0
         

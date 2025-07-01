@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="slider">
+        <img src="https://picsum.photos/200/300" alt="image" id="image">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#prev").click(function(){
+                $("#image").prev().show();
+            });
+            $("#next").click(function(){
+                $("#image").next().show();
+            });
+        });
+    </script>
+</body>
+</html>

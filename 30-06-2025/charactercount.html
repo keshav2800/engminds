@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Count</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Enter your text">
+    <p id="count">0</p>
+    <script>
+        $(document).ready(function(){
+            $("#input").on("input", function(){
+                var text = $(this).val();
+                $("#count").text(text.length);
+            });
+        });
+    </script>
+</body>
+</html>

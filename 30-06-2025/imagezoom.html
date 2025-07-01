@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <img src="https://picsum.photos/200/300" alt="image" id="image">
+    <script>
+        $(document).ready(function(){
+            $("#image").mouseenter(function(){
+                $(this).css("width", "400px");
+            });
+            $("#image").mouseleave(function(){
+                $(this).css("width", "200px");
+            });
+        });
+    </script>
+</body>
+</html>
