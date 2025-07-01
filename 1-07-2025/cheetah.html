@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheetah animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="cheetah">
+        <img src="./images/1.png" id="1" style="width: 100px; height: 100px; display: none;">
+        <img src="./images/2.png" id="2" style="width: 100px; height: 100px; display: none;">
+        <img src="./images/3.png" id="3" style="width: 100px; height: 100px; display: none;">
+        <img src="./images/4.png" id="4" style="width: 100px; height: 100px; display: none;">
+        <img src="./images/5.png" id="5" style="width: 100px; height: 100px; display: none;">
+        <img src="./images/6.png" id="6" style="width: 100px; height: 100px; display: none;">
+        <img src="./images/7.png" id="7" style="width: 100px; height: 100px; display: none;">
+        <img src="./images/8.png" id="8" style="width: 100px; height: 100px; display: none;">
+    </div>
+    <script>
+        $(document).ready(function(){
+           let i = 0;
+           const images = $("#cheetah img");
+           images.eq(0).show();
+           setInterval(function(){
+            i = (i + 1) % images.length;
+            images.eq(i-1).hide();
+            images.eq(i).show();
+           }, 100);
+        })
+    </script>
+</body>
+</html>

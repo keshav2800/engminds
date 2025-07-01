@@ -8,18 +8,25 @@
 </head>
 <body>
     <div id="slider">
-        <img src="https://picsum.photos/200/300" alt="image" id="image">
+        <img src="https://images.pexels.com/photos/20183314/pexels-photo-20183314.jpeg" id="1" style="wi">
+        <img src="https://images.pexels.com/photos/20183314/pexels-photo-20183314.jpeg" id="2" style="display: none;">
+        <img src="https://images.pexels.com/photos/20183314/pexels-photo-20183314.jpeg" id="3" style="display: none;">
+        <img src="https://images.pexels.com/photos/20183314/pexels-photo-20183314.jpeg" id="4" style="display: none;">
+        <img src="https://images.pexels.com/photos/20183314/pexels-photo-20183314.jpeg" id="5" style="display: none;">
+        <img src="https://images.pexels.com/photos/20183314/pexels-photo-20183314.jpeg" id="6" style="display: none;">
+        <img src="https://images.pexels.com/photos/20183314/pexels-photo-20183314.jpeg" id="7" style="display: none;">
         <button id="prev">Previous</button>
         <button id="next">Next</button>
     </div>
     <script>
         $(document).ready(function(){
-            $("#prev").click(function(){
-                $("#image").prev().show();
-            });
+            let index = 0;
+            const images = $(".slider img");
             $("#next").click(function(){
-                $("#image").next().show();
-            });
+                images.eq(index).hide();
+                index = (index + 1) % images.length;
+                images.eq(index).show();
+            })
         });
     </script>
 </body>
