@@ -7,7 +7,6 @@ export default function TaskList() {
   const { Task, toggleComplete, removeTask, editTask, clearAll } = useContext(TaskContext);
   const [editingIndex, setEditingIndex] = useState(null);
 
-  // Clear all tasks and reset edit state
   const handleClearAll = () => {
     clearAll();
     setEditingIndex(null);

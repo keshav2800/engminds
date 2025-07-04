@@ -53,7 +53,7 @@ export default function Taskinput({ editIndex, editValue, onEdit, onCancelEdit }
             type="submit"
             className="taskinput-btn update"
           >
-            Upda
+            Update
           </button>
           <button
             type="button"
