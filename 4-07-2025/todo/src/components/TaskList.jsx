@@ -4,24 +4,28 @@ import TaskItem from "./TaskItem.jsx";
 import Taskinput from "./Taskinput.jsx";
 
 export default function TaskList() {
-  const { Task, toggleComplete, removeTask, editTask, clearAll } = useContext(TaskContext);
+  const { Task, toggleComplete, removeTask, editTask, clearCompleted } = useContext(TaskContext);
   const [editingIndex, setEditingIndex] = useState(null);
 
-  const handleClearAll = () => {
-    clearAll();
+  // Only show button if there is at least one completed task
+  const hasCompleted = Task.some(task => task.completed);
+
+  // Clear completed tasks and reset edit state
+  const handleClearCompleted = () => {
+    clearCompleted();
     setEditingIndex(null);
   };
 
   return (
     <div className="tasklist-container">
-      <div className="todo-controls" style={{ marginBottom: Task.length > 0 ? 16 : 0 }}>
-        {Task.length > 0 && (
+      <div className="todo-controls" style={{ marginBottom: hasCompleted ? 16 : 0 }}>
+        {hasCompleted && (
           <button
             className="clear-btn"
-            onClick={handleClearAll}
-            aria-label="Clear all"
+            onClick={handleClearCompleted}
+            aria-label="Clear completed"
           >
-            &#10006; Clear All
+            &#10006; Clear Completed
           </button>
         )}
       </div>
