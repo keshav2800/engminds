@@ -62,6 +62,7 @@ export default function TaskItem({ task, index, onToggleComplete, onRemove, onEd
         <button
           className="taskitem-btn remove"
           aria-label="Remove task"
+          onClick={onRemove}
         >
           X
         </button>
