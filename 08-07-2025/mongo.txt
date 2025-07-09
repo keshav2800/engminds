@@ -1,0 +1,57 @@
+query operator
+
+find update aggregate
+
+$eq
+$ne
+gt
+gte
+lt
+lte
+in
+nin
+exists
+type
+
+
+logical operators
+and
+or
+nor
+
+update operator
+set
+unset
+inc
+mul
+rename
+max
+
+
+array operators
+push
+pop
+pull
+addtoset
+each
+
+
+projection 
+1/0
+slice
+
+aggregator operator
+match
+sort
+limit
+skip
+lookup
+
+group operator
+sum
+avg
+min
+max
+first 
+last
+
