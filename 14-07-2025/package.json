@@ -1,0 +1,19 @@
+{
+  "name": "14-07-2025",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon redux.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "nodemon": "^3.1.10",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
+  }
+}
